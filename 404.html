@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#041217">
+<meta name="description" content="STACKLY Renewable Energy — the page you requested could not be found.">
+<title>404 - Page Not Found | STACKLY</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+:root{
+  --night:#041217;
+  --night2:#09242b;
+  --ink:#071a20;
+  --muted:#6f8287;
+  --blue:#078cf8;
+  --cyan:#00d1ff;
+  --green:#6fd400;
+  --lime:#b7ef00;
+  --sun:#ffc400;
+  --mist:#f3faf7;
+  --white:#fff;
+  --line:rgba(255,255,255,.14);
+  --container:min(1180px,92%);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  scroll-behavior:smooth;
+}
+body{
+  width:100%;
+  height:100%;
+  min-height:100%;
+  font-family:"DM Sans",Arial,sans-serif;
+  background:var(--night);
+  color:var(--white);
+  overflow:hidden;
+}
+a{text-decoration:none;color:inherit}
+button{font:inherit;cursor:pointer}
+img{display:block;max-width:100%}
+
+/* 404 PAGE */
+.page-404{
+  width:100%;
+  height:100svh;
+  min-height:100svh;
+  position:relative;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  isolation:isolate;
+  background:#041217;
+}
+
+/* Renewable-energy hero image + exact site color language */
+.page-404::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-5;
+  background:
+    linear-gradient(90deg,
+      rgba(2,15,20,.97) 0%,
+      rgba(2,20,25,.88) 34%,
+      rgba(2,20,25,.48) 66%,
+      rgba(2,20,25,.76) 100%),
+    linear-gradient(180deg,
+      rgba(2,15,20,.28) 0%,
+      rgba(2,15,20,.82) 100%),
+    url("assets/images/404/01.webp")
+    center/cover no-repeat;
+  transform:scale(1.035);
+  animation:bgDrive 15s ease-in-out infinite alternate;
+}
+
+.page-404::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-4;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 76% 24%,rgba(0,209,255,.14),transparent 22%),
+    radial-gradient(circle at 72% 76%,rgba(111,212,0,.10),transparent 25%),
+    linear-gradient(0deg,#031014 0%,transparent 20%,transparent 78%,#031014 100%);
+}
+
+/* Subtle clean-energy rays */
+.energy-rays{
+  position:absolute;
+  width:620px;
+  height:620px;
+  right:-285px;
+  top:-265px;
+  z-index:-2;
+  border:1px solid rgba(0,209,255,.16);
+  border-radius:50%;
+  box-shadow:
+    0 0 0 80px rgba(111,212,0,.025),
+    0 0 0 160px rgba(0,209,255,.018),
+    0 0 0 240px rgba(183,239,0,.012);
+}
+.energy-rays::before,
+.energy-rays::after{
+  content:"";
+  position:absolute;
+  inset:17%;
+  border:1px dashed rgba(183,239,0,.16);
+  border-radius:50%;
+  animation:energySpin 24s linear infinite;
+}
+.energy-rays::after{
+  inset:31%;
+  border-color:rgba(0,209,255,.18);
+  animation-direction:reverse;
+  animation-duration:18s;
+}
+
+/* Soft bottom energy field */
+.energy-grid{
+  position:absolute;
+  left:-10%;
+  right:-10%;
+  bottom:-16%;
+  height:47%;
+  z-index:-1;
+  opacity:.45;
+  transform:perspective(520px) rotateX(58deg) scale(1.18);
+  transform-origin:bottom;
+  background:
+    linear-gradient(115deg,transparent 49.7%,rgba(0,209,255,.11) 50%,transparent 50.3%) 0 0/125px 100%,
+    linear-gradient(180deg,transparent 0 88%,rgba(111,212,0,.11) 89%,transparent 90%) 0 0/100% 70px;
+  mask-image:linear-gradient(to top,black,transparent);
+  -webkit-mask-image:linear-gradient(to top,black,transparent);
+}
+
+/* Small scan accent */
+.scanline{
+  position:absolute;
+  left:0;
+  right:0;
+  top:50%;
+  height:1px;
+  background:linear-gradient(90deg,transparent,var(--cyan),var(--green),transparent);
+  opacity:.25;
+  animation:scan 5s ease-in-out infinite;
+}
+
+/* Decorative corners */
+.corner{
+  position:absolute;
+  width:46px;
+  height:46px;
+  opacity:.45;
+}
+.corner::before,.corner::after{
+  content:"";
+  position:absolute;
+  background:var(--cyan);
+}
+.corner::before{width:100%;height:1px;top:0;left:0}
+.corner::after{height:100%;width:1px;top:0;left:0}
+.c1{top:35px;left:35px}
+.c2{top:35px;right:35px;transform:rotate(90deg)}
+.c3{bottom:35px;left:35px;transform:rotate(-90deg)}
+.c4{bottom:35px;right:35px;transform:rotate(180deg)}
+
+.error-shell{
+  width:var(--container);
+  display:grid;
+  grid-template-columns:1fr;
+  align-items:center;
+  justify-items:center;
+  height:100%;
+  min-height:0;
+  padding:72px 0 24px;
+  position:relative;
+  z-index:3;
+}
+
+.error-copy{
+  width:100%;
+  max-width:900px;
+  margin-inline:auto;
+  text-align:center;
+}
+
+.kicker{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  padding:8px 12px;
+  border:1px solid rgba(255,255,255,.15);
+  background:rgba(255,255,255,.055);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-radius:999px;
+  color:#c8dde0;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+  margin-bottom:19px;
+}
+.kicker i{
+  color:var(--green);
+  filter:drop-shadow(0 0 8px rgba(111,212,0,.65));
+}
+
+.error-code{
+  font-family:"Manrope",sans-serif;
+  font-size:clamp(100px,15vw,205px);
+  line-height:.78;
+  letter-spacing:-13px;
+  font-weight:800;
+  color:transparent;
+  background:linear-gradient(100deg,#fff 8%,#55d8ff 42%,#b7ef00 78%,#fff 100%);
+  background-size:180% auto;
+  -webkit-background-clip:text;
+  background-clip:text;
+  text-shadow:0 0 70px rgba(0,209,255,.10);
+  margin-left:-10px;
+  width:100%;
+  text-align:center;
+  animation:grad 6s linear infinite;
+}
+
+.error-title{
+  font-family:"Manrope",sans-serif;
+  margin-top:28px;
+  font-size:clamp(30px,4vw,54px);
+  line-height:1;
+  letter-spacing:-2.5px;
+  font-weight:800;
+  text-transform:uppercase;
+  width:100%;
+  text-align:center;
+}
+.error-title span{
+  background:linear-gradient(100deg,var(--blue),var(--cyan) 45%,var(--green));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.error-copy p{
+  max-width:700px;
+  margin:19px auto 0;
+  color:#b2c8cd;
+  font-size:14px;
+  line-height:1.8;
+  text-align:center;
+}
+
+.actions{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:11px;
+  margin-top:29px;
+}
+.action-btn{
+  min-height:48px;
+  padding:13px 19px;
+  border-radius:999px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.45px;
+  text-transform:uppercase;
+  border:1px solid transparent;
+}
+.home-btn{
+  background:linear-gradient(110deg,var(--blue),var(--cyan) 50%,var(--green));
+  color:#fff;
+  border-color:rgba(0,209,255,.4);
+  box-shadow:0 14px 36px rgba(0,140,249,.20);
+}
+.back-btn{
+  background:rgba(255,255,255,.055);
+  color:#dcebed;
+  border-color:rgba(255,255,255,.15);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+}
+
+.status{
+  margin-top:23px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  color:#88a5aa;
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:1.7px;
+  text-transform:uppercase;
+}
+.status-dot{
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--green);
+  box-shadow:0 0 13px rgba(111,212,0,.7);
+}
+
+/* Desktop hover only — matching the project's interaction rule */
+@media (min-width:1025px) and (hover:hover) and (pointer:fine){
+  .error-copy{
+    animation:contentEnter .9s cubic-bezier(.22,1,.36,1) both;
+  }
+  .action-btn{
+    transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease,background .28s ease;
+  }
+  .home-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 20px 48px rgba(0,140,249,.28);
+    border-color:var(--lime);
+  }
+  .back-btn:hover{
+    transform:translateY(-4px);
+    border-color:rgba(0,209,255,.55);
+    background:rgba(0,209,255,.07);
+    box-shadow:0 15px 35px rgba(0,209,255,.10);
+  }
+}
+
+@media (max-width:1024px){
+  .error-shell{
+    width:min(92%,760px);
+    min-height:100svh;
+    padding:84px 0 28px;
+  }
+  .error-code{
+    font-size:clamp(92px,19vw,170px);
+    margin-left:0;
+  }
+  .error-title{font-size:clamp(29px,5vw,48px)}
+}
+
+@media (max-width:767px){
+  .error-shell{
+    width:min(92%,620px);
+    padding:76px 0 22px;
+  }
+  .kicker{
+    font-size:8px;
+    letter-spacing:2px;
+    margin-bottom:14px;
+  }
+  .error-code{
+    font-size:clamp(78px,24vw,135px);
+    letter-spacing:-7px;
+  }
+  .error-title{
+    font-size:clamp(25px,7.5vw,38px);
+    letter-spacing:-1px;
+    margin-top:20px;
+  }
+  .error-copy p{
+    font-size:12px;
+    line-height:1.65;
+    margin:14px auto 0;
+    max-width:560px;
+  }
+  .actions{
+    display:grid;
+    grid-template-columns:1fr;
+    width:min(100%,360px);
+    margin:22px auto 0;
+    gap:9px;
+  }
+  .action-btn{
+    width:100%;
+    min-height:48px;
+  }
+  .status{
+    margin-top:18px;
+    font-size:8px;
+  }
+  .energy-grid{height:34%}
+  .energy-rays{
+    width:470px;
+    height:470px;
+    right:-300px;
+    top:-225px;
+  }
+  .corner{opacity:.3}
+}
+
+@media (max-height:620px){
+  .error-shell{padding-top:50px;padding-bottom:12px}
+  .kicker{margin-bottom:8px}
+  .error-code{font-size:clamp(64px,18vh,110px)}
+  .error-title{margin-top:14px}
+  .error-copy p{margin-top:10px;line-height:1.45}
+  .actions{margin-top:14px}
+  .status{margin-top:10px}
+}
+
+@media (max-width:480px){
+  .error-shell{
+    width:calc(100% - 28px);
+    padding:66px 0 16px;
+  }
+  .kicker{
+    font-size:7.5px;
+    letter-spacing:1.6px;
+    padding:7px 10px;
+  }
+  .error-code{
+    font-size:72px;
+    letter-spacing:-5px;
+  }
+  .error-title{font-size:24px;line-height:1.05}
+  .error-copy p{
+    font-size:11px;
+    line-height:1.6;
+    max-width:330px;
+  }
+  .actions{width:min(100%,330px);margin-top:19px}
+  .action-btn{min-height:46px;font-size:9px}
+  .status{margin-top:14px;font-size:7px;letter-spacing:1.2px}
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    scroll-behavior:auto!important;
+  }
+}
+</style>
+</head>
+
+<body>
+<main class="page-404" aria-labelledby="error-title">
+  <div class="energy-rays" aria-hidden="true"></div>
+  <div class="energy-grid" aria-hidden="true"></div>
+  <div class="scanline" aria-hidden="true"></div>
+
+  <span class="corner c1" aria-hidden="true"></span>
+  <span class="corner c2" aria-hidden="true"></span>
+  <span class="corner c3" aria-hidden="true"></span>
+  <span class="corner c4" aria-hidden="true"></span>
+
+  <section class="error-shell">
+    <div class="error-copy">
+      <div class="kicker">
+        <i class="fa-solid fa-leaf"></i>
+        STACKLY RENEWABLE ENERGY / CLEAN ENERGY ROUTE
+      </div>
+
+      <div class="error-code" aria-hidden="true">404</div>
+
+      <h1 class="error-title" id="error-title">
+        Page <span>Not Found.</span>
+      </h1>
+
+      <p>
+        The clean-energy page you requested could not be found.
+        It may have moved, been removed, or is no longer available.
+        Let’s get you back to the STACKLY Renewable Energy experience.
+      </p>
+
+      <div class="actions">
+        <button class="action-btn back-btn" type="button" id="backBtn">
+          <i class="fa-solid fa-arrow-left"></i>
+          Back to Previous Page
+        </button>
+
+        <a class="action-btn home-btn" href="index.html">
+          <i class="fa-solid fa-home"></i>
+          Back to Home
+        </a>
+      </div>
+
+      <div class="status">
+        <span class="status-dot"></span>
+        Clean energy system ready
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+(function(){
+  const backBtn=document.getElementById('backBtn');
+
+  backBtn.addEventListener('click',function(){
+    if(window.history.length > 1){
+      window.history.back();
+      return;
+    }
+    window.location.href='index.html';
+  });
+
+  window.addEventListener('pageshow',function(){
+    document.documentElement.scrollTop=0;
+    document.body.scrollTop=0;
+  });
+})();
+</script>
+</body>
+</html>
