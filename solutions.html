@@ -4819,7 +4819,7 @@ if(window.AOS){AOS.init({duration:950,easing:'ease-out-cubic',once:true,offset:7
    Header and footer are intentionally excluded. */
 (function(){
   document.addEventListener('click', function(e){
-    const el = e.target.closest('main a, main button, main [role="button"], main .sol-card, main .use-card, main .sol-node, main .sol-mini-stats div, main .sol-process-grid article');
+    const el = e.target.closest('main a, main button, main [role="button"], main .sol-card, main .use-card, main .sol-node, main .sol-mini-stats div');
     if(!el) return;
     if(el.disabled || el.getAttribute('aria-disabled') === 'true') return;
     e.preventDefault();

@@ -2941,7 +2941,8 @@ section.av-lead .av-lead-grid{
     position:relative !important;
     z-index:1 !important;
     overflow:hidden !important;
-    cursor:pointer !important;
+    cursor:default !important;
+    pointer-events:none !important;
     isolation:isolate !important;
     transform:translateY(0) scale(1) !important;
     background:rgba(255,255,255,.035) !important;
@@ -3776,6 +3777,80 @@ section.av-lead .av-lead-grid{
 </style>
 
 
+<style id="stackly-energy-panel-interaction-fix">
+  /* Decorative Energy Intelligence panel: visible, but never behaves like a control. */
+  .hero-panel,
+  .hero-panel * {
+    cursor: default !important;
+  }
+
+  .hero-panel {
+    pointer-events: auto !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .hero-panel:hover,
+  .hero-panel:focus,
+  .hero-panel:focus-within {
+    transform: none !important;
+    border-color: rgba(255,255,255,.13) !important;
+    background: linear-gradient(145deg,rgba(4,28,35,.88),rgba(4,24,28,.68)) !important;
+    box-shadow: 0 35px 90px rgba(0,0,0,.26) !important;
+  }
+
+  .hero-panel::before,
+  .hero-panel::after,
+  .hero-panel:hover::before,
+  .hero-panel:hover::after,
+  .hero-panel .flow-box::before,
+  .hero-panel .flow-box::after,
+  .hero-panel:hover .flow-box,
+  .hero-panel .flow-box:hover,
+  .hero-panel:hover .live,
+  .hero-panel .flow-box:hover b,
+  .hero-panel .flow-box:hover span {
+    animation: none !important;
+    transform: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+  }
+
+  .hero-panel .flow-box,
+  .hero-panel .flow-box:hover {
+    cursor: default !important;
+    background: rgba(255,255,255,.035) !important;
+    border-color: rgba(255,255,255,.07) !important;
+    transition: none !important;
+  }
+
+  /* About-page Energy Intelligence card shown in the user's screenshot. */
+  .avh-card,
+  .avh-card * {
+    cursor: default !important;
+    pointer-events: auto !important;
+    animation: none !important;
+    transition: none !important;
+  }
+  .avh-card,
+  .avh-card:hover,
+  .avh-card:focus,
+  .avh-card:focus-within {
+    transform: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+  }
+  .avh-card .avh-mini,
+  .avh-card .avh-mini:hover,
+  .avh-card .avh-mini:focus {
+    cursor: default !important;
+    transform: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+</style>
 </head>
 
 <body>
@@ -4150,21 +4225,35 @@ if(window.AOS){AOS.init({duration:950,easing:'ease-out-cubic',once:true,offset:7
 
 
 <script>
-/* STACKLY: redirect every clickable item inside main content to 404.html.
-   Header and footer are intentionally excluded. */
+/* STACKLY: redirect content clicks, except the decorative Energy Intelligence panel. */
 (function () {
   function redirectContentClick(event) {
-    const target = event.target.closest(
+    const clickedElement = event.target;
+    if (!(clickedElement instanceof Element)) return;
+
+    /* Decorative Energy Intelligence panels are display-only. Block clicks
+       inside both the homepage panel and the About-page card in the screenshot. */
+    const energyPanel = clickedElement.closest('.hero-panel, .avh-card');
+    if (energyPanel) {
+      event.preventDefault();
+      event.stopPropagation();
+      event.stopImmediatePropagation();
+      return;
+    }
+
+    const target = clickedElement.closest(
       'a, button, [role="button"], [onclick], .clickable, .av-principle, .avh-mini, .number-card, .bento-card, .project, .flow-box'
     );
 
     if (!target || !target.closest('main')) return;
 
-    /* Do not interfere with text selection or disabled controls. */
-    if (target.matches(':disabled') || target.getAttribute('aria-disabled') === 'true') return;
+    if (
+      target.matches(':disabled') ||
+      target.getAttribute('aria-disabled') === 'true'
+    ) return;
 
     event.preventDefault();
-    event.stopPropagation();
+    event.stopImmediatePropagation();
     window.location.href = '404.html';
   }
 

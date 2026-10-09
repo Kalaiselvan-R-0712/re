@@ -2762,6 +2762,10 @@ if(window.AOS){AOS.init({duration:950,easing:'ease-out-cubic',once:true,offset:7
 
     if (!target || !target.closest('main')) return;
 
+    /* The Energy Command panel (including the 92% / 88% / 96% flow boxes)
+       is informational only and must never redirect to 404.html. */
+    if (target.closest('.hero-panel, .energy-flow, .flow-box')) return;
+
     if (
       target.disabled ||
       target.getAttribute('aria-disabled') === 'true' ||
