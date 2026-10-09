@@ -2263,6 +2263,774 @@ html,body{
   .contact-cta-btn{width:100%}
 }
 </style>
+
+<style>
+/* =========================================================
+   MOBILE FOOTER — CENTERED + FULLY FIT SOCIAL ICONS
+   Mobile/tablet only; desktop footer remains unchanged.
+========================================================= */
+@media (max-width: 600px){
+  .renew-footer{
+    width:100% !important;
+    max-width:100% !important;
+    box-sizing:border-box !important;
+    padding-left:18px !important;
+    padding-right:18px !important;
+    overflow:hidden !important;
+    text-align:center !important;
+  }
+
+  .renew-footer .footer-top{
+    width:100% !important;
+    max-width:100% !important;
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    justify-items:center !important;
+    align-items:start !important;
+    gap:38px !important;
+  }
+
+  .renew-footer .footer-brand,
+  .renew-footer .footer-column,
+  .renew-footer .footer-connect{
+    width:100% !important;
+    max-width:100% !important;
+    text-align:center !important;
+    justify-self:center !important;
+  }
+
+  .renew-footer .footer-logo{
+    display:block !important;
+    width:min(205px,72vw) !important;
+    max-width:100% !important;
+    height:auto !important;
+    margin:0 auto 22px !important;
+  }
+
+  .renew-footer .footer-brand p,
+  .renew-footer .footer-connect-box p{
+    width:100% !important;
+    max-width:330px !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    text-align:center !important;
+  }
+
+  /* Five social icons now fit inside every normal mobile viewport. */
+  .renew-footer .footer-socials{
+    width:100% !important;
+    max-width:300px !important;
+    margin:26px auto 0 !important;
+    display:flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+    gap:9px !important;
+    flex-wrap:nowrap !important;
+    overflow:visible !important;
+  }
+
+  .renew-footer .footer-socials a{
+    width:48px !important;
+    height:48px !important;
+    min-width:48px !important;
+    max-width:48px !important;
+    flex:0 0 48px !important;
+    display:grid !important;
+    place-items:center !important;
+    margin:0 !important;
+  }
+
+  .renew-footer .footer-socials svg{
+    width:21px !important;
+    height:21px !important;
+  }
+
+  .renew-footer .footer-column h4,
+  .renew-footer .footer-connect-box h4{
+    text-align:center !important;
+  }
+
+  .renew-footer .footer-heading-line{
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+
+  .renew-footer .footer-links{
+    align-items:center !important;
+    justify-content:center !important;
+    text-align:center !important;
+  }
+
+  .renew-footer .footer-links a{
+    display:block !important;
+    width:100% !important;
+    text-align:center !important;
+  }
+
+  .renew-footer .footer-connect-box{
+    width:100% !important;
+    max-width:420px !important;
+    margin:0 auto !important;
+    padding:30px 20px !important;
+    text-align:center !important;
+  }
+
+  .renew-footer .footer-subscribe{
+    width:100% !important;
+    max-width:360px !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    justify-content:center !important;
+  }
+
+  .renew-footer .footer-contact-row{
+    width:100% !important;
+    max-width:100% !important;
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    justify-items:center !important;
+    text-align:center !important;
+    gap:0 !important;
+  }
+
+  .renew-footer .footer-contact-item{
+    width:100% !important;
+    max-width:340px !important;
+    justify-content:center !important;
+    text-align:center !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+
+  .renew-footer .footer-bottom{
+    width:100% !important;
+    max-width:100% !important;
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    justify-content:center !important;
+    text-align:center !important;
+  }
+
+  .renew-footer .footer-legal{
+    width:100% !important;
+    justify-content:center !important;
+    align-items:center !important;
+    text-align:center !important;
+  }
+}
+
+@media (max-width:340px){
+  .renew-footer .footer-socials{
+    gap:6px !important;
+    max-width:270px !important;
+  }
+  .renew-footer .footer-socials a{
+    width:44px !important;
+    height:44px !important;
+    min-width:44px !important;
+    max-width:44px !important;
+    flex-basis:44px !important;
+  }
+}
+</style>
+
+
+<style>
+/* FINAL DESKTOP FOOTER SOCIAL ALIGNMENT */
+@media (min-width:1025px) and (hover:hover) and (pointer:fine){
+  .renew-footer .footer-brand{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:flex-start !important;
+  }
+
+  .renew-footer .footer-socials{
+    width:100% !important;
+    max-width:560px !important;
+    margin:30px auto 0 !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:22px !important;
+    flex-wrap:nowrap !important;
+    box-sizing:border-box !important;
+  }
+
+  .renew-footer .footer-socials a{
+    width:90px !important;
+    height:90px !important;
+    min-width:90px !important;
+    max-width:90px !important;
+    flex:0 0 90px !important;
+    margin:0 !important;
+    display:grid !important;
+    place-items:center !important;
+    box-sizing:border-box !important;
+  }
+
+  .renew-footer .footer-socials a svg{
+    width:27px !important;
+    height:27px !important;
+    display:block !important;
+    margin:0 !important;
+  }
+
+  .renew-footer .footer-socials a:nth-child(2) svg{
+    width:29px !important;
+    height:29px !important;
+  }
+
+  .renew-footer .footer-socials a:nth-child(3) svg{
+    width:27px !important;
+    height:27px !important;
+  }
+
+  .renew-footer .footer-socials a:nth-child(4) svg{
+    width:26px !important;
+    height:26px !important;
+  }
+
+  .renew-footer .footer-socials a:nth-child(5) svg{
+    width:28px !important;
+    height:28px !important;
+  }
+}
+
+/* Keep the existing mobile/tablet footer behavior untouched. */
+</style>
+
+
+<style>
+/* FINAL FIX — DESKTOP FOOTER SOCIALS MUST STAY INSIDE BRAND COLUMN */
+@media (min-width:1025px) and (hover:hover) and (pointer:fine){
+  .renew-footer .footer-brand{
+    min-width:0 !important;
+    width:100% !important;
+    overflow:visible !important;
+  }
+
+  .renew-footer .footer-socials{
+    width:100% !important;
+    max-width:100% !important;
+    margin:30px 0 0 !important;
+    padding:0 !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    gap:clamp(10px,1vw,16px) !important;
+    flex-wrap:nowrap !important;
+    box-sizing:border-box !important;
+    overflow:visible !important;
+  }
+
+  .renew-footer .footer-socials a{
+    width:clamp(68px,4.5vw,78px) !important;
+    height:clamp(68px,4.5vw,78px) !important;
+    min-width:0 !important;
+    max-width:none !important;
+    flex:1 1 0 !important;
+    display:grid !important;
+    place-items:center !important;
+    margin:0 !important;
+    box-sizing:border-box !important;
+  }
+
+  .renew-footer .footer-socials a svg{
+    width:26px !important;
+    height:26px !important;
+    display:block !important;
+    margin:0 !important;
+  }
+}
+
+/* At narrower desktop widths, keep all five circles safely inside the first column. */
+@media (min-width:1025px) and (max-width:1200px) and (hover:hover) and (pointer:fine){
+  .renew-footer .footer-socials{
+    gap:10px !important;
+  }
+  .renew-footer .footer-socials a{
+    width:62px !important;
+    height:62px !important;
+  }
+  .renew-footer .footer-socials a svg{
+    width:22px !important;
+    height:22px !important;
+  }
+}
+
+
+/* BUG 001 FIX — FOOTER ADDRESS HOVER (DESKTOP ONLY) */
+@media (min-width: 1025px) and (hover: hover) and (pointer: fine) {
+  .renew-footer .footer-address {
+    display: inline-block;
+    transition: color 0.25s ease, text-decoration-color 0.25s ease;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 4px;
+  }
+
+  .renew-footer .footer-contact-item:has(.footer-address):hover
+  .footer-address {
+    color: #00aeca;
+    text-decoration-color: #00aeca;
+  }
+}
+
+
+/* BUG 002 FIX — COMPACT, PROFESSIONAL FOOTER ALIGNMENT */
+.renew-footer {
+  padding: 64px 4.5% 22px !important;
+}
+
+.renew-footer .footer-top,
+.renew-footer .footer-contact-row,
+.renew-footer .footer-bottom {
+  width: 100% !important;
+  max-width: 1360px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
+}
+
+.renew-footer .footer-top {
+  display: grid !important;
+  grid-template-columns:
+    minmax(0, 1.15fr)
+    minmax(0, 0.8fr)
+    minmax(0, 0.85fr)
+    minmax(0, 1fr) !important;
+  gap: clamp(20px, 2.4vw, 36px) !important;
+  align-items: start !important;
+}
+
+.renew-footer .footer-top > *,
+.renew-footer .footer-brand,
+.renew-footer .footer-column,
+.renew-footer .footer-connect {
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+.renew-footer .footer-brand p,
+.renew-footer .footer-connect-box p {
+  font-size: 12px !important;
+  line-height: 1.8 !important;
+}
+
+.renew-footer .footer-column h4,
+.renew-footer .footer-connect-box h4 {
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+}
+
+.renew-footer .footer-links {
+  gap: 10px !important;
+}
+
+.renew-footer .footer-links a {
+  font-size: 12px !important;
+  line-height: 1.6 !important;
+  overflow-wrap: anywhere;
+}
+
+.renew-footer .footer-connect-box {
+  width: 100% !important;
+  padding: 22px !important;
+  box-sizing: border-box !important;
+}
+
+/* FIX: FULL-WIDTH EMAIL INPUT + BUTTON BELOW */
+.renew-footer .footer-subscribe {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  gap: 12px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+}
+
+.renew-footer .footer-subscribe input[type="email"] {
+  display: block !important;
+  flex: 0 0 54px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  height: 54px !important;
+  padding: 0 16px !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  background: #071219 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  caret-color: #00d1ff !important;
+  border: 1px solid rgba(0, 209, 255, 0.3) !important;
+  border-radius: 4px !important;
+  outline: none !important;
+  font-family: "DM Sans", sans-serif !important;
+  font-size: 14px !important;
+  line-height: normal !important;
+  opacity: 1 !important;
+}
+
+.renew-footer .footer-subscribe input[type="email"]::placeholder {
+  color: #819aa1 !important;
+  -webkit-text-fill-color: #819aa1 !important;
+  opacity: 1 !important;
+}
+
+.renew-footer .footer-subscribe input[type="email"]:focus {
+  background-color: #071219 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  caret-color: #00d1ff !important;
+  border-color: #00d1ff !important;
+  box-shadow: 0 0 0 3px rgba(0, 209, 255, 0.1) !important;
+}
+
+/* FIX: Chrome / Edge email autofill suggestion */
+.renew-footer .footer-subscribe input[type="email"]:-webkit-autofill,
+.renew-footer .footer-subscribe input[type="email"]:-webkit-autofill:hover,
+.renew-footer .footer-subscribe input[type="email"]:-webkit-autofill:focus,
+.renew-footer .footer-subscribe input[type="email"]:-webkit-autofill:active {
+  -webkit-text-fill-color: #ffffff !important;
+  caret-color: #00d1ff !important;
+  -webkit-box-shadow: inset 0 0 0 1000px #071219 !important;
+  box-shadow: inset 0 0 0 1000px #071219 !important;
+  background-color: #071219 !important;
+  border: 1px solid rgba(0, 209, 255, 0.3) !important;
+  border-radius: 4px !important;
+  transition: background-color 99999s ease-out 0s !important;
+}
+
+/* FIX: Firefox autofill suggestion */
+.renew-footer .footer-subscribe input[type="email"]:-moz-autofill {
+  background-color: #071219 !important;
+  color: #ffffff !important;
+  caret-color: #00d1ff !important;
+  box-shadow: inset 0 0 0 1000px #071219 !important;
+  border: 1px solid rgba(0, 209, 255, 0.3) !important;
+}
+
+.renew-footer .footer-subscribe button {
+  display: flex !important;
+  flex: 0 0 54px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  height: 54px !important;
+  padding: 0 16px !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  white-space: normal !important;
+  border: 0 !important;
+  border-radius: 4px !important;
+  color: #ffffff !important;
+  font-family: "DM Sans", sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  background: linear-gradient(
+    110deg,
+    var(--blue),
+    var(--cyan) 53%,
+    var(--green)
+  ) !important;
+}
+
+@media (max-width: 600px) {
+  .renew-footer .footer-subscribe {
+    gap: 12px !important;
+  }
+
+  .renew-footer .footer-subscribe input[type="email"],
+  .renew-footer .footer-subscribe button {
+    width: 100% !important;
+    height: 52px !important;
+    flex-basis: 52px !important;
+  }
+}
+
+.renew-footer .footer-contact-row {
+  display: grid !important;
+  grid-template-columns:
+    minmax(0, 1.2fr)
+    minmax(0, 1fr)
+    minmax(0, 1fr) !important;
+  gap: 16px 24px !important;
+  align-items: center !important;
+  margin-top: 34px !important;
+  padding: 22px 0 !important;
+}
+
+.renew-footer .footer-contact-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  min-width: 0 !important;
+}
+
+.renew-footer .footer-contact-item span:last-child,
+.renew-footer .footer-contact-item a {
+  min-width: 0 !important;
+  font-size: 12px !important;
+  line-height: 1.7 !important;
+  overflow-wrap: anywhere;
+}
+
+.renew-footer .footer-bottom {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 12px 20px !important;
+  padding-top: 20px !important;
+  font-size: 11px !important;
+}
+
+.renew-footer .footer-legal {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 18px !important;
+}
+
+@media (min-width: 1025px) {
+  .renew-footer .footer-brand .footer-logo {
+    max-width: 190px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .renew-footer .footer-top {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 28px !important;
+  }
+
+  .renew-footer .footer-contact-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .renew-footer {
+    padding: 44px 6% 20px !important;
+  }
+
+  .renew-footer .footer-top {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 28px !important;
+  }
+
+  .renew-footer .footer-contact-row {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 16px !important;
+    margin-top: 24px !important;
+  }
+
+  .renew-footer .footer-bottom {
+    flex-direction: column !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  .renew-footer .footer-legal {
+    justify-content: center !important;
+  }
+}
+
+/* FIX: MATCH INDEX.HTML STAY CONNECTED BOX */
+.renew-footer .footer-connect-box {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 290px !important;
+  padding: 22px !important;
+  box-sizing: border-box !important;
+  display: block !important;
+}
+
+/* Keep heading and description consistent */
+.renew-footer .footer-connect-box h4 {
+  margin: 0 0 14px !important;
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+}
+
+.renew-footer .footer-connect-box p {
+  margin: 13px 0 22px !important;
+  max-width: 100% !important;
+  font-size: 12px !important;
+  line-height: 1.7 !important;
+}
+
+/* Email and Subscribe */
+.renew-footer .footer-subscribe {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: 12px !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+.renew-footer .footer-subscribe input,
+.renew-footer .footer-subscribe button {
+  width: 100% !important;
+  min-width: 0 !important;
+  height: 54px !important;
+  box-sizing: border-box !important;
+}
+
+/* Tablet and mobile */
+@media (max-width: 1100px) {
+  .renew-footer .footer-connect-box {
+    height: auto !important;
+    min-height: 260px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .renew-footer .footer-connect-box {
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 24px !important;
+  }
+}
+
+/* BUG 006 — MOBILE-SAFE ENERGY ENQUIRY DROPDOWN */
+.contact-field:has(.contact-dropdown) {
+  min-width: 0;
+  position: relative;
+  z-index: 5;
+}
+
+.contact-field:has(.contact-dropdown:has(.contact-dropdown-menu:not([hidden]))) {
+  z-index: 100;
+}
+
+.contact-select-native {
+  display: none !important;
+}
+
+.contact-dropdown {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+}
+
+.contact-dropdown-trigger {
+  width: 100%;
+  min-height: 49px;
+  padding: 13px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border: 1px solid rgba(7, 26, 32, .11);
+  border-radius: 15px;
+  background: #fff;
+  color: var(--ink);
+  font: 500 12px "DM Sans", sans-serif;
+  text-align: left;
+}
+
+.contact-dropdown-trigger span:first-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.contact-dropdown-arrow {
+  width: 9px;
+  height: 9px;
+  flex: 0 0 9px;
+  display: block;
+  position: relative;
+  top: -2px;
+  margin-left: 10px;
+  border-right: 2px solid #40565d;
+  border-bottom: 2px solid #40565d;
+  transform: rotate(45deg);
+  transform-origin: center;
+  pointer-events: none;
+}
+
+.contact-dropdown-trigger:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+}
+
+.contact-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 100%;
+  max-height: min(220px, 35vh);
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid rgba(0, 157, 214, .3);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(3, 29, 36, .16);
+  z-index: 200;
+}
+
+.contact-dropdown-menu[hidden] {
+  display: none !important;
+}
+
+.contact-dropdown.drop-up .contact-dropdown-menu {
+  top: auto;
+  bottom: calc(100% + 5px);
+}
+
+.contact-dropdown-menu button {
+  display: block;
+  width: 100%;
+  min-height: 42px;
+  padding: 11px 14px;
+  border: 0;
+  border-bottom: 1px solid #edf3f2;
+  background: #fff;
+  color: var(--ink);
+  font: 500 13px "DM Sans", sans-serif;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.contact-dropdown-menu button:last-child {
+  border-bottom: 0;
+}
+
+.contact-dropdown-menu button[aria-selected="true"] {
+  background: #eaf9f4;
+  color: #087e9d;
+  font-weight: 700;
+}
+
+.contact-field.invalid .contact-dropdown-trigger {
+  border-color: #d66b5d;
+}
+
+@media (max-width: 700px) {
+  .contact-dropdown-menu {
+    max-height: min(190px, 32vh);
+  }
+
+  .contact-dropdown-menu button {
+    min-height: 42px;
+    padding: 11px 12px;
+  }
+}
+
+</style>
+
 </head>
 <body>
 <div id="preloader"><div class="loader"><img alt="STACKLY Renewable Energy" src="assets/images/logo/stackly_logo.webp"/><div class="loader-ring"></div><small>Powering the future</small></div></div>
@@ -2278,7 +3046,7 @@ html,body{
         Talk to STACKLY about solar generation, energy storage, intelligent monitoring and renewable-energy projects designed for the way you need to operate.
       </p>
       <div class="contact-hero-actions" data-aos="zoom-in" data-aos-delay="280">
-        <a class="btn btn-main" href="#contact-form">Start an enquiry <span>↓</span></a>
+        <a class="btn btn-main" href="404.html">Start an enquiry <span>↓</span></a>
         <a class="btn btn-glass" href="404.html">View support route <span>↗</span></a>
       </div>
     </div>
@@ -2349,7 +3117,43 @@ html,body{
           <div class="contact-field"><label for="crName">Full name *</label><input id="crName" type="text" autocomplete="name" placeholder="Your full name"><small class="contact-error">Please enter a valid name.</small></div>
           <div class="contact-field"><label for="crEmail">Email address *</label><input id="crEmail" type="email" autocomplete="email" placeholder="you@example.com"><small class="contact-error">Please enter a valid email address.</small></div>
           <div class="contact-field"><label for="crPhone">Phone number *</label><input id="crPhone" type="tel" autocomplete="tel" placeholder="+91 70107 92745"><small class="contact-error">Please enter a valid phone number.</small></div>
-          <div class="contact-field"><label for="crType">Energy enquiry *</label><select id="crType"><option value="">Select an enquiry type</option><option>Solar generation</option><option>Energy storage</option><option>Smart energy systems</option><option>Renewable project</option><option>General enquiry</option></select><small class="contact-error">Please select an enquiry type.</small></div>
+          <div class="contact-field">
+  <label for="crTypeButton">Energy enquiry *</label>
+
+  <!-- Keep the original select for existing form validation -->
+  <select id="crType" class="contact-select-native" aria-hidden="true" tabindex="-1">
+    <option value="">Select an enquiry type</option>
+    <option>Solar generation</option>
+    <option>Energy storage</option>
+    <option>Smart energy systems</option>
+    <option>Renewable project</option>
+    <option>General enquiry</option>
+  </select>
+
+  <div class="contact-dropdown">
+    <button
+      type="button"
+      id="crTypeButton"
+      class="contact-dropdown-trigger"
+      aria-haspopup="listbox"
+      aria-expanded="false"
+      aria-controls="crTypeOptions">
+      <span>Select an enquiry type</span>
+      <span class="contact-dropdown-arrow" aria-hidden="true"></span>
+    </button>
+
+    <div class="contact-dropdown-menu" id="crTypeOptions"
+         role="listbox" aria-label="Energy enquiry types" hidden>
+      <button type="button" role="option" data-value="Solar generation">Solar generation</button>
+      <button type="button" role="option" data-value="Energy storage">Energy storage</button>
+      <button type="button" role="option" data-value="Smart energy systems">Smart energy systems</button>
+      <button type="button" role="option" data-value="Renewable project">Renewable project</button>
+      <button type="button" role="option" data-value="General enquiry">General enquiry</button>
+    </div>
+  </div>
+
+  <small class="contact-error">Please select an enquiry type.</small>
+</div>
           <div class="contact-field full"><label for="crMessage">Tell us about your requirement *</label><textarea id="crMessage" placeholder="What are you planning? Tell us about your site, energy need or project."></textarea><small class="contact-error">Please enter at least 10 characters.</small></div>
           <div class="contact-field full contact-submit-row">
             <p class="contact-form-note">By submitting, your enquiry will be routed to the STACKLY renewable-energy contact flow.</p>
@@ -2452,7 +3256,7 @@ html,body{
 <div class="footer-contact-row">
 <div class="footer-contact-item">
 <span class="footer-contact-icon">⌖</span>
-<span>MMR Complex, Salem, TN, India</span>
+<span class="footer-address">MMR Complex, Salem, TN, India</span>
 </div>
 <div class="footer-contact-item">
 <span class="footer-contact-icon">✉</span>
@@ -2500,6 +3304,90 @@ menuToggle.addEventListener('click',()=>nav.classList.contains('open')?closeMobi
 nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMobileMenu));
 window.addEventListener('resize',()=>{if(window.innerWidth>1024&&nav.classList.contains('open'))closeMobileMenu()});
 topButton.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+/* BUG 006 — SAFE CUSTOM DROPDOWN BEHAVIOUR */
+(function () {
+  const dropdown = document.querySelector('.contact-dropdown');
+  const nativeSelect = document.getElementById('crType');
+  const trigger = document.getElementById('crTypeButton');
+
+  if (!dropdown || !nativeSelect || !trigger) return;
+
+  const menu = document.getElementById('crTypeOptions');
+  const label = trigger.querySelector('span:first-child');
+  const options = [...menu.querySelectorAll('[data-value]')];
+
+  function closeDropdown() {
+    menu.hidden = true;
+    trigger.setAttribute('aria-expanded', 'false');
+    dropdown.classList.remove('drop-up');
+  }
+
+  function openDropdown() {
+    menu.hidden = false;
+    trigger.setAttribute('aria-expanded', 'true');
+
+    const rect = trigger.getBoundingClientRect();
+    const availableBelow = window.innerHeight - rect.bottom;
+    const availableAbove = rect.top;
+    const requiredSpace = Math.min(190, window.innerHeight * 0.32);
+
+    dropdown.classList.toggle(
+      'drop-up',
+      availableBelow < requiredSpace && availableAbove > availableBelow
+    );
+  }
+
+  function syncSelection() {
+    const selected = nativeSelect.value;
+    label.textContent = selected || 'Select an enquiry type';
+
+    options.forEach(option => {
+      const isSelected = option.dataset.value === selected;
+      option.setAttribute('aria-selected', String(isSelected));
+    });
+  }
+
+  trigger.addEventListener('click', () => {
+    if (menu.hidden) openDropdown();
+    else closeDropdown();
+  });
+
+  options.forEach(option => {
+    option.addEventListener('click', () => {
+      nativeSelect.value = option.dataset.value;
+      nativeSelect.dispatchEvent(new Event('change', { bubbles: true }));
+      syncSelection();
+      closeDropdown();
+      trigger.focus();
+    });
+  });
+
+  document.addEventListener('click', event => {
+    if (!dropdown.contains(event.target)) closeDropdown();
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && !menu.hidden) {
+      closeDropdown();
+      trigger.focus();
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (!menu.hidden) openDropdown();
+  });
+
+  nativeSelect.addEventListener('change', syncSelection);
+
+  const form = document.getElementById('renewableContactForm');
+  if (form) form.addEventListener('reset', () => {
+    closeDropdown();
+    requestAnimationFrame(syncSelection);
+  });
+
+  syncSelection();
+})();
 
 const form=document.getElementById('renewableContactForm');
 function validateField(field,ok){field.classList.toggle('invalid',!ok);return ok}
